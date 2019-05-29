@@ -339,10 +339,10 @@ class Client:
             url = "persons"
         return self._get(url, **kwargs)
 
-    def get_persons_by_name(self, params=None):
-        if params is not None:
+    def get_persons_by_name(self, term=None):
+        if term is not None:
             url = "persons/find"
-            return self._get(url, params=params)
+            return self._get(url, term=term)
 
     def create_person(self, **kwargs):
         if kwargs is not None:
